@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long n, pie=0;
+    cin>>n;
+
+    double a[n], milkPack, glass;
+
+    for(int i=0; i<n; i++)
+    {
+        cin>>a[i];
+    }
+
+    for(int i=0; i<n; i++)
+    {
+        if(a[i]<30.0)
+        {
+            pie++;
+        }
+    }
+
+    glass = (double)pie;
+
+    if(fmod(glass, 4.5) == 0.0 )
+    {
+        milkPack = glass/4.5;
+    }
+    else
+    {
+        milkPack = ceil(glass/4.5);
+    }
+
+    cout<<milkPack<<" "<<glass;
+
+    return 0;
+}
+
